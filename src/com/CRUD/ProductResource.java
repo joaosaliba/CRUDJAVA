@@ -3,6 +3,7 @@ package com.CRUD;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -60,4 +61,15 @@ public class ProductResource {
 
 	}
 
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("{id}")
+	public Response put(@PathParam("id") int id) {
+		if(dao.delete(id)) {
+			return Response.ok().build();
+		}else {
+			return Response.notModified().build();
+		}
+
+	}
 }
