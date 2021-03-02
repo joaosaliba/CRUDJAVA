@@ -1,4 +1,4 @@
-package com.CRUD;
+package com.CRUD.entity;
 
 public class Product {
 	private int id;

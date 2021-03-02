@@ -1,7 +1,9 @@
-package com.CRUD;
+package com.CRUD.persistence;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.CRUD.entity.Product;
 
 public class ProductDAO {
 	private static ProductDAO instance;
